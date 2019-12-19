@@ -1,0 +1,77 @@
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+public class Robo {
+
+    public static void main(String[] args) throws AWTException, IOException,
+            URISyntaxException {
+        Robot robot = new Robot();
+
+        int login[] = {
+            KeyEvent.VK_L,
+            KeyEvent.VK_O,
+            KeyEvent.VK_G,
+            KeyEvent.VK_I,
+            KeyEvent.VK_N,
+        };
+
+        int senha[] = {
+            KeyEvent.VK_1,
+            KeyEvent.VK_2,
+            KeyEvent.VK_3,
+            KeyEvent.VK_4,
+            KeyEvent.VK_5,
+            KeyEvent.VK_6,
+            KeyEvent.VK_7,
+            KeyEvent.VK_8,
+            KeyEvent.VK_9,
+            KeyEvent.VK_0};
+
+        java.awt.Desktop.getDesktop().browse(
+                new URI("https://registro.br/cgi-bin/nicbr/login"));
+        robot.delay(3000);
+
+        //Login
+        for (int i = 0; i < login.length; i++) {
+            robot.keyPress(login[i]);
+            robot.delay(100);
+            robot.keyRelease(login[i]);
+            robot.delay(300);
+        }
+        robot.delay(200);
+        robot.keyPress(KeyEvent.VK_TAB);
+        robot.delay(100);
+        robot.keyRelease(KeyEvent.VK_TAB);
+        robot.delay(1000);
+
+        //Senha
+        for (int j = 0; j < senha.length; j++) {
+            robot.keyPress(senha[j]);
+            robot.delay(100);
+            robot.keyRelease(senha[j]);
+            robot.delay(300);
+        }
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.delay(100);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        robot.delay(1000);
+
+        try {
+            for (int i = 0, j = 1000; i < 1000; i++, j--) {
+                robot.mouseMove(i, j);
+                robot.delay(5);
+            }
+            robot.delay(500);
+            //robot.mousePress(InputEvent.BUTTON1_MASK);
+            //robot.mouseRelease(InputEvent.BUTTON1_MASK);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        robot.delay(200);
+    }
+}
+

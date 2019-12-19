@@ -1,0 +1,71 @@
+import numpy as np
+import pandas as pd
+
+data = pd.DataFrame([
+    {'host': 1, 'country': 'fr', 'year': 2010, 'month': 1, 'clicks': 123, 'users': 4},
+    {'host': 1, 'country': 'fr', 'year': 2010, 'month': 2, 'clicks': 134, 'users': 5},
+    {'host': 1, 'country': 'fr', 'year': 2010, 'month': 3, 'clicks': 341, 'users': 2},
+    {'host': 1, 'country': 'es', 'year': 2010, 'month': 1, 'clicks': 113, 'users': 4},
+    {'host': 1, 'country': 'es', 'year': 2010, 'month': 2, 'clicks': 234, 'users': 5},
+    {'host': 1, 'country': 'es', 'year': 2010, 'month': 3, 'clicks': 421, 'users': 2},
+    {'host': 1, 'country': 'es', 'year': 2010, 'month': 4, 'clicks': 22, 'users': 3},
+    {'host': 2, 'country': 'es', 'year': 2010, 'month': 1, 'clicks': 111, 'users': 2},
+    {'host': 2, 'country': 'es', 'year': 2010, 'month': 2, 'clicks': 2, 'users': 4},
+    {'host': 3, 'country': 'es', 'year': 2010, 'month': 3, 'clicks': 34, 'users': 2},
+    {'host': 3, 'country': 'es', 'year': 2010, 'month': 4, 'clicks': 1, 'users': 1}
+])
+
+pd.pivot_table(data,
+   index=['host'],
+   values=['users', 'clicks'],
+   columns=['year', 'month'],
+   fill_value=''
+  )
+
+pd.pivot_table(data,
+               index=['host'],
+               values=['users', 'clicks'],
+               columns=['year', 'month'],
+               fill_value='',
+               aggfunc=np.sum,
+               margins=True,
+               margins_name='Total'
+
+pd.pivot_table(data,
+               index=['host', 'country'],
+               values=['users', 'clicks'],
+               columns=['year', 'month'],
+               fill_value=''
+              )
+
+pd.pivot_table(data,
+               index=['host', 'country'],
+               values=['users', 'clicks'],
+               columns=['year', 'month'],
+               aggfunc=np.sum,
+               fill_value='',
+               margins=True,
+               margins_name='Total'
+              )
+
+data.groupby(['host', 'country'])[('clicks', 'users')].sum()
+
+data.groupby(['
+
+              out = data.groupby('host').apply(lambda sub: sub.pivot_table(
+    index=['host', 'country'],
+    values=['users', 'clicks'],
+    columns=['year', 'month'],
+    aggfunc=np.sum,
+    margins=True,
+    margins_name='SubTotal',
+))
+
+out.loc[('', 'Max', '')] = out.max()
+out.loc[('', 'Min', '')] = out.min()
+out.loc[('', 'Total', '')] = out.sum()
+
+out.index = out.index.droplevel(0)
+
+out.fillna('', inplace=True)
+

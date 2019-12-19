@@ -1,0 +1,33 @@
+# importar o modulo para 'falar' com o MySQL
+import MySQLdb
+
+
+def gravarPessoa(cursor, nome, idade):
+    sql = "insert into pessoas values( '" + nome + "'," + idade + " ) "
+    try:
+        cursor.execute(sql)
+    except MySQLdb.Warning, w:
+        print w
+    except MySQLdb.Error, e:
+        print "Erro executando \n " + sql
+        print e
+
+
+# criando uma conexao mysql
+# com o servidor na mesma maquina( localhost )
+# usuario root do mysql
+# e senha em branco
+conexao = MySQLdb.connect('localhost', 'root', '')
+
+# selecionando o banco 'teste'
+conexao.select_db('teste')
+
+# criando um 'cursor'
+cursor = conexao.cursor()
+
+sair = None
+while sair <> 'S':
+    nome = raw_input('Digite o nome: ')
+    idade = raw_input('Digite a idade: ')
+    gravarPessoa(cursor, nome, idade)
+    sair = raw_input(' Digite S para sair ou tecle enter para continuar ')

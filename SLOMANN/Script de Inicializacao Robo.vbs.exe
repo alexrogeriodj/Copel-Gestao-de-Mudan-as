@@ -1,0 +1,77 @@
+import pyautogui
+import time
+pyautogui.click(450,450);pyautogui.typewrite('graphicsnotes');pyautogui.press('enter')
+time.sleep(2)
+for i in range(107):
+  pyautogui.press('right');pyautogui.press('enter')
+  pyautogui.hotkey('ctrl','r');pyautogui.hotkey('ctrl','s')
+  time.sleep(2)
+  pyautogui.press('esc')
+  time.sleep(2)
+  time.sleep(2)
+
+
+
+//Iniciando um programa ou documento//
+
+C:\Users\E804821\Desktop\Script de Inicializacao Robo.exe
+C:\Program Files\LibreOffice\program\scalc.exe
+Run scalc.exe
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Incidentes
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Incidentes
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Problemas
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Problemas
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Serviços
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Serviços
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Mudanças-Indicador de reação
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Mudanças-Indicador de reação
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Disponibilidade de Sistemas Críticos
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Disponibilidade de Sistemas Críticos
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Disponibilidade IAAS
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Disponibilidade IAAS
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Disponibilidade PAAS
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Disponibilidade PAAS
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Incidentes-calc
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Incidentes-calc
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Problemas-calc
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Problemas-calc
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Serviços-calc
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201911-Serviços-calc
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Controlm-201901-201911-Incidentes
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Controlm-201901-201911-Incidentes
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201805-201911-Incidentes e Serviços
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201805-201911-Incidentes e Serviços
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201805-201911-Incidentes e Serviços-Histórico
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\201805-201911-Incidentes e Serviços-Histórico
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Node Availability - Last Month
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Node Availability - Last Month
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Triggered Alert History - Last 30 Day
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Apoio-11\Triggered Alert History - Last 30 Day
+open = Run R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Lista_de_Sistemas_Críticos_Organizar
+Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\Lista_de_Sistemas_Críticos_Organizar
+
+
+
+Run http://itsmprd.copel.nt/sap(bD1wdCZjPTEwMCZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm
+http://itsmprd.copel.nt/sap(bD1wdCZjPTEwMCZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm = Run save on R:\STI_OPER\G_TEC\RAC- movido TEAMS - COIADM\2019\RAC_11-2019\
+
+
+
+
+onclick= "href="javascript:void(0)" onclick="return onShareClicked( event );">Liberar</a>";
+java.awt.Desktop.getDesktop().browse(
+                new URI("http://itsmprd.copel.nt/sap(bD1wdCZjPTEwMCZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm"));
+        robot.delay(3000);
+
+onclick= "href="javascript:void(0)" onclick="return onPersonalizationClicked( event );">Personalizar</a>";
+
+java.awt.Desktop.getDesktop().browse(
+                new URI("http://itsmprd.copel.nt/sap(bD1wdCZjPTEwMCZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm"));
+        robot.delay(3000);
+
+onclick= "href="javascript:void(0)" onclick="return onSysMsgClicked( event );">Mensagens de sistema</a>";
+
+java.awt.Desktop.getDesktop().browse(
+                new URI("http://itsmprd.copel.nt/sap(bD1wdCZjPTEwMCZkPW1pbg==)/bc/bsp/sap/crm_ui_start/default.htm"));
+        robot.delay(3000);
+

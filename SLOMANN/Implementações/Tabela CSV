@@ -1,0 +1,81 @@
+import io
+import pandas as pd
+from collections import OrderedDict
+
+# Lendo o arquivo para uma lista de linhas
+f = open('test1.csv', mode='r')
+lines = f.readlines()
+
+# Exculuindo o cabeçalho
+del lines[0]
+///Resultado inicial://
+
+lines
+['2017-03-03/2017-03-09,Filho,8\n',
+ '2017-03-03/2017-03-09,Gabriel,2\n',
+ '2017-03-03/2017-03-09,Jao,10\n',
+ '2017-03-03/2017-03-09,Otavio,6\n',
+ '2017-03-03/2017-03-09,Talita,9\n',
+ '2017-03-10/2017-03-16,Guilherme,1\n',
+ '2017-03-10/2017-03-16,Talita,7\n']
+
+//Criando o dicionário e variaveis auxiliares//
+
+semanas, nomes = [], []
+d1 = OrderedDict()
+for l in lines:
+    line = l.rstrip().split(',')
+    if line[0] not in semanas:
+        semanas.append(line[0])
+        d1[line[0]] = {}
+    d1[line[0]][line[1]] = line[2]
+
+nomes=[]
+[nomes.append(k) for v in d1.values() for k in v.keys() if k not in nomes]
+
+//Tabulando os dados para alimentar o dataframe//
+
+
+data = []
+for nome in nomes:
+    n = []
+    for semana in semanas:
+        if nome in d1[semana]:
+            n.append(d1[semana][nome])
+        else:
+            n.append(0)
+    data.append(n)
+
+    //Resutado
+    intermediário(dicionário, nomes, semanas
+    e
+    dados)://
+
+    d1
+    {'2017-03-03/2017-03-09': {'Filho': '8',
+                               'Gabriel': '2',
+                               'Jao': '10',
+                               'Otavio': '6',
+                               'Talita': '9'},
+     '2017-03-10/2017-03-16': {'Guilherme': '1', 'Talita': '7'}}
+
+    nomes
+    ['Filho', 'Gabriel', 'Jao', 'Otavio', 'Talita', 'Guilherme']
+
+    semanas
+    ['2017-03-03/2017-03-09', '2017-03-10/2017-03-16']
+
+    data
+    [['8', 0], ['2', 0], ['10', 0], ['6', 0], ['9', '7'], [0, '1']]
+
+    //Construindo
+    e
+    formatando
+    a
+    tabela
+    final.//
+
+    columns = []
+    for i in range(len(semanas)):
+        columns.append('Week' + str(i))
+    df = pd.DataFrame(data, index=nomes, columns=columns)

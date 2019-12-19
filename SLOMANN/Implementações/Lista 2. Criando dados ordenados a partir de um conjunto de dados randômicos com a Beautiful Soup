@@ -1,0 +1,37 @@
+//Lista 2. Criando dados ordenados a partir de um conjunto de dados randômicos com a Beautiful Soup//
+
+from glob import glob
+from BeautifulSoup import BeautifulSoup
+
+
+def process():
+    print "!MOVIE,DIRECTOR,KEY_GRIP,THE_MOOSE"
+    for fname in glob('result_*'):
+        # Put that sloppy HTML into the soup
+        soup = BeautifulSoup(open(fname))
+
+        # Try to find the fields we want, but default to unknown values
+        try:
+            movie = soup.findAll('span', {'class': 'movie_title'})[1].contents[0]
+        except IndexError:
+            fname = "UNKNOWN"
+
+        try:
+            director = soup.findAll('div', {'class': 'director'})[1].contents[0]
+        except IndexError:
+            lname = "UNKNOWN"
+
+        try:
+            # Maybe multiple grips listed, key one should be in there
+            grips = soup.findAll('p', {'id': 'grip'})[0]
+            grips = " ".join(grips.split())  # Normalize extra spaces
+        except IndexError:
+            title = "UNKNOWN"
+
+        try:
+            # Hide some stuff in the HTML <meta> tags
+            moose = soup.findAll('meta', {'name': 'shibboleth'})[0]['content']
+        except IndexError:
+            moose = "UNKNOWN"
+
+        print '"%s","%s","%s","%s"' % (movie, director, grips, moose)
