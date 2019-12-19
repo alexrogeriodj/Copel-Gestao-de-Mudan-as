@@ -1,0 +1,32 @@
+projects table
+CREATE TABLE IF NOT EXISTS projects (
+    id integer PRIMARY KEY,
+    Responsavel_atual text NOT NULL,
+    Fim_Desejado date text,
+    Status text NOT NULL,
+    Administrador_de_Modificacoes text NOT NULL,
+    Descricao_do_pedido_associado text NOT NULL,
+    Responsavel_pela_Atividade text NOT NULL,
+    Prioridade date text (baixo, medio, elevado, muito_elevado),
+    Categoria text NOT NULL,
+    Pedido_de_modificacao_associado date text,
+
+
+    begin_date text,
+    end_date text
+);
+ 
+-- tasks table
+CREATE TABLE IF NOT EXISTS tasks (
+    id integer PRIMARY KEY,
+    Responsavel_atual text NOT NULL,
+    Fim_Desejado date text,
+    Status text NOT NULL,
+    Administrador_de_Modificacoes text NOT NULL,
+    Descricao_do_pedido_associado text NOT NULL,
+    Responsavel_pela_Atividade text NOT NULL,
+    Prioridade date text (baixo, medio, elevado, muito_elevado),
+    Categoria text NOT NULL,
+    Pedido_de_modificacao_associado date text,
+
+    FOREIGN KEY (project_id) REFERENCES projects (id)
